@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="chat-container">
+    <h2>AI Study Buddy</h2>
+    <div class="chat-history">
+        {% for message in chat_history %}
+            <div class="{{ message.role }}">
+                <strong>{{ message.role.capitalize() }}:</strong> {{ message.text }}
+            </div>
+        {% endfor %}
+    </div>
+    <form method="POST">
+        <div class="chat-input-row"> <!-- Added wrapper div -->
+            <input class="chat_input" type="text" name="message" placeholder="Type your message..." required>
+            <button type="submit" class="chat_submit">Send</button>
+        </div>
+    </form>
+    <!-- Add this form above or below your chat form in chat.html -->
+    
+</div>
+<form method="POST" action="{{ url_for('chat.clear_chat_history') }}" >
+        <button type="submit" class="clear-chat-form">Clear Chat</button>
+</form>
+{% endblock %}

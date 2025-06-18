@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block head %} 
+{% endblock %}
+{% block body %} 
+<div class="todo_con">
+    <h1>Managing your task with our To-do List</h1>
+    <p>Ensure that you'll never miss another deadline</p>
+    <div class="to_do_list">
+    {% if username %}
+        <h1>{{ username }}'s To-do List ❤️</h1>
+    {% endif %}
+        <form method="POST" action="{{ url_for('todo.todo_view') }}" class="todo_form">
+            <input type="text" name="task" placeholder="Add a new task" required>
+            <input type="date" name="deadline" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <ul class="todo_item">
+            {% for todo in todos %}
+                <li>
+                    {{ todo.task }}
+                    {% if todo.deadline %}
+                        (Deadline: {{ todo.deadline.strftime('%Y-%m-%d') }})
+                    {% endif %}
+                    <a href="/todo/delete/{{ todo.id }}">Completed</a>
+                </li>
+            {% endfor %}
+        </ul> 
+        <div class="display_items">
+                {% if todos|length > 0 %}
+            <p>Total tasks: {{ todos|length }}</p>
+        {% endif %}
+        {% if todos|length == 0 %}
+            <p>No tasks available.</p>
+        {% endif %}
+        </div>
+    </div>
+</div>
+
+    
+{% endblock %}

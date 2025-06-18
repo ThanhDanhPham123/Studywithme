@@ -1,0 +1,358 @@
+body {
+    margin: 0;
+    background-color: #f9e0ea;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.home_page_content>.tell_us_more{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    color: #000000; /* example color */
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+.app_title{
+    font-size: 30px;
+    padding:10 10 0 0 ;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    align-items: center;
+    background-color: pink;
+    width:100%;
+    height: 150px;
+    font-family: "Dancing Script", cursive;
+}
+.app_title h1:hover {
+    transform: scale(1.1)
+}
+.app_title h1 {
+    display: flex;
+    background-color: rgb(241, 134, 151);
+    width:fit-content;
+    height: fit-content;
+    margin: 7px 0 0 20px;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+.app_title_link {
+    color: inherit;
+    text-decoration: none;
+}
+.nav_bar{
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    width: 100%;
+    background-color:rgb(255, 208, 229);
+    height:30px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    color:black;
+}
+.nav_list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 50px;
+    font-weight: 300;
+}
+.nav_link {
+    color: inherit;
+    text-decoration: none;
+}
+.nav_link:hover {
+    text-decoration: underline;
+    color: #d63384; /* example color */
+}
+.home_page_content{
+    flex: 1;
+    display: flex;
+    font-family:'Quicksand', sans-serif; ;
+    flex-direction: column;
+    align-items: center;
+    justify-content:start;
+    height: calc(100vh - 130px); 
+    animation: fade_in 1s ease-in-out;
+    animation-timing-function: forwards;;
+}
+@keyframes fade_in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+    
+.fotter {
+    background-color: #ffd0e5;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    margin-top: auto;
+}
+
+.footer_text {
+    margin: 5px 0;
+}
+
+.footer_link {
+    color: #d63384;
+    text-decoration: none;
+}
+.footer_link:hover {
+    text-decoration: underline;
+}
+.log_out {
+    display: flex;
+    background-color: #f954a6; /* pink background */
+    color: white; /* white text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.log_out:hover {
+    transform: scale(1.1);
+    background-color: #f4469d; /* darker pink on hover */
+    animation: zoom 0.3s;
+}
+/*For the homepage's user choices*/
+.home_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px; /* optional: controls form width */
+}
+.user_choices {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    background-color: #ffb4da;
+    border-radius: 12px;
+    width: 500px;
+    height:100%;
+    padding: 20px;
+    margin-bottom: 80px;
+    gap: 60px
+}
+.home_form select {
+    width: 100%;      /* or any px value, e.g., 250px */
+    height: 40px;     /* adjust as needed */
+    font-size: 16px;  /* adjust text size */
+    padding: 5px 10px;
+    border-radius: 6px; /* optional: rounded corners */
+    border: 1px solid #ffdddd;
+}
+.home_form input {
+    width: 92%;      /* or any px value, e.g., 250px */
+    height: 40px;     /* adjust as needed */
+    font-size: 16px;  /* adjust text size */
+    padding: 5px 10px;
+    border-radius: 6px; /* optional: rounded corners */
+    border: 1px solid #ffdddd;
+}
+.home_form button {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #f954a6; /* pink background */
+    color: white; /* white text */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.home_form button:hover {
+    transform: scale(1.1);
+    background-color: #f4469d; /
+}
+
+/* For the to-do list design*/
+.todo_con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    animation: fade_in 0.5s ease-in-out;
+    animation-timing-function: forwards;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 160px;
+
+}
+.to_do_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: fit-content;
+    width: 500px;
+    background-color: #ffb9dc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.todo_form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px; /* optional: controls form width */
+    margin-top: 20px;
+}
+.todo_form input{
+    width: 100%;      /* or any px value, e.g., 250px */
+    height: 40px;     /* adjust as needed */
+    font-size: 16px;  /* adjust text size */
+    padding: 5px 10px;
+    border-radius: 6px; /* optional: rounded corners */
+    border: 1px solid #ffdddd;
+}
+.todo_form button {
+    width: 106%;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #f954a6; /* pink background */
+    color: white; /* white text */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.todo_form button:hover {
+    transform: scale(1.1);
+    background-color: #f4469d; 
+}
+.to_do_list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.to_do_list li{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    background-color: #fc98ca;
+    border-radius: 6px;
+    padding: 5px 5px 0 0;
+
+}
+/*Chatbot design*/
+.chat-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fade_in 0.5s ease-in-out;
+    animation-timing-function: forwards;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 160px;
+    background-color: #fe83c1;
+    color: rgb(0, 0, 0);
+    width: 900px;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 50px;
+}
+.chat_container h2 {
+    margin-bottom: 20px;
+}
+.chat_submit {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #f954a6; /* pink background */
+    color: rgb(255, 255, 255); /* white text */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    gap: 20px;
+
+}
+.chat-history {
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+    background-color: #ffb3d9;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.chat_submit:hover {
+    transform: scale(1.1);
+    background-color: #f4469d; 
+}
+.chat-input-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px;
+    box-sizing: border-box; /* Added */
+}
+
+.chat_input {
+    flex: 1;
+    width: 100%;           /* Changed from 700px */
+    max-width: 700px;      /* Optional: limit max width */
+    height: 40px;          /* Match button height for alignment */
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background-color: #f9e0ea;
+    box-sizing: border-box; /* Added */
+}
+.clear-chat-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fade_in 0.5s ease-in-out;
+    animation-timing-function: forwards;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 160px;
+    background-color: #ffb3d9;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+}
+.clear-chat-form:hover {
+    transform: scale(1.1);
+    background-color: #f4469d; 
+}

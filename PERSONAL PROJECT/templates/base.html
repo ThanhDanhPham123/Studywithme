@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}{% endblock %}
+    <title>Study with me</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito&family=Poppins&family=Quicksand&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=M+PLUS+Rounded+1c&family=Meow+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app_title">
+        <h1>
+            <a href="/" class="app_title_link">Study With Me</a>
+        </h1>
+    </div>
+    <div class="nav_bar">
+        <ul class="nav_list">
+            <li class="nav_item"><a href="/" class="nav_link">Home</a></li>
+            <li class="nav_item"><a href="/about_and_contact" class="nav_link">About And Contact</a></li>
+            <li class="nav_item"><a href="/to_do_list" class="nav_link">To-do List</a></li>
+            <li class="nav_item"><a href="/progess_tracker" class="nav_link">Progress tracker</a></li>
+            <li class="nav_item"><a href="/study_timer" class="nav_link">Study Timer</a></li>
+            <li class="nav_item"><a href="/document" class="nav_link">Document organizing</a></li>
+            <li class="nav_item"><a href="{{ url_for('chat.chat_with_bot') }}" class="nav_link">AI buddy</a></li>
+        </ul>
+    </div>
+    {% block body %}{% endblock %}
+    <div class="fotter">
+        <p class="footer_text">© 2023 Study With Me. All rights reserved.</p>
+        <p class="footer_text">Made with ❤️ by <a href="https://www.facebook.com/dan.gon.360720/" class="footer_link">me</a></p>
+    </div>
+</body>
+</html>

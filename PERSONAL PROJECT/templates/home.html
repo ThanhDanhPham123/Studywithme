@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block head %} 
+{% endblock %}
+{% block body %} 
+<div class="home_page">
+    <div class="home_page_content">
+        <h1>Welcome to Study With Me ©</h1>
+        <p>Your one-stop solution for effective study management.</p>
+        {% if username %}
+            <h2>{{ username }}'s journey with us starts now ❤️❤️!!</h2>
+            <a class="log_out" href="{{ url_for('logout') }}">Not you? Sign in as someone else</a>
+        {% else %}
+            <p class="tell_us_more">Tell us more about yourself !!</p>
+            <div class="user_choices">
+                <form method="POST" action="/" class="home_form">
+                    <label for="username">You want to be called:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="grad_year">Graduation Year:</label>
+                    <select id="grad_year" name="grad_year" required>
+                        {% for year in years %}
+                            <option value="{{ year }}">{{ year }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="purpose">What do you need us for:</label>
+                    <select id="purpose" name="purpose" required>
+                        <option value="1">Managing my time </option>
+                        <option value="2">Getting homework done on time </option>
+                        <option value="3">Improve my school-life balance</option>
+                        <option value="4">Skill Improvement</option>
+                        <option value="5">Other</option>
+                    </select>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
