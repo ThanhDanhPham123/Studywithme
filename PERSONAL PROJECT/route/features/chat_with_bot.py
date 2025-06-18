@@ -7,7 +7,7 @@ from auth import login_required
 chat_bp = Blueprint("chat", __name__, url_prefix="/chat")
 
 # AI model client setup
-client = genai.Client(api_key="AIzaSyCEt8hchpwxR7p8FnlM_KHyhu3tV8gdRfQ")
+client = genai.Client(api_key="PRIVATE API")
 
 @chat_bp.route("/chat_with_bot", methods=["GET", "POST"])
 @login_required
