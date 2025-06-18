@@ -5,8 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    align-items: center;
-    justify-content: center;
+
 }
 .home_page_content>.tell_us_more{
     font-family: 'Quicksand', sans-serif;
@@ -103,7 +102,7 @@ body {
 .fotter {
     background-color: #ffd0e5;
     text-align: center;
-    padding: 20px 0;
+    padding: 1em 0;
     width: 100%;
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
@@ -355,4 +354,31 @@ body {
 .clear-chat-form:hover {
     transform: scale(1.1);
     background-color: #f4469d; 
+}
+/* For the about page design */
+.about_page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    animation: fade_in 1s ease-in-out;
+    animation-timing-function: forwards;
+    margin-bottom: 160px;
+}
+.about_page_content {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+    animation: fade_in 0.5s ease-in-out;
+    animation-timing-function: forwards;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ffa7d3;
+    width: 800px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 10px;
 }

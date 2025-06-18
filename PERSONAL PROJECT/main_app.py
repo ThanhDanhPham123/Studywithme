@@ -2,6 +2,7 @@
 from flask import Flask, render_template, url_for, request, redirect, session
 from route.features.todo import todo 
 from route.features.chat_with_bot import chat_bp  # Import the chat blueprint
+from route.features.about import about_bp # Import the about blueprint
 from flask_sqlalchemy import SQLAlchemy
 from db import db #Initialize the databse in another file to prevent circular imports
 from functools import wraps
@@ -53,6 +54,7 @@ def logout():
 
 app.register_blueprint(todo) # Register the todo blueprint
 app.register_blueprint(chat_bp)  # Register the chat blueprint
+app.register_blueprint(about_bp)  # Register the about blueprint
 db.init_app(app)  # Bind to app after creation
 
 if __name__ == "__main__":

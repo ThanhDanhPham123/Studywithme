@@ -5,7 +5,12 @@
     <div class="chat-history">
         {% for message in chat_history %}
             <div class="{{ message.role }}">
-                <strong>{{ message.role.capitalize() }}:</strong> {{ message.text }}
+                <strong>{{ message.role.capitalize() }}:</strong>
+                {% if message.role == 'bot' %}
+                    {{ message.text|safe }}
+                {% else %}
+                    {{ message.text }}
+                {% endif %}
             </div>
         {% endfor %}
     </div>
