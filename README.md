@@ -1,6 +1,6 @@
 # Studywithme
 # Study With Me
-
+(This is a prototype)
 A web application to help students manage their study life, featuring a to-do list, AI study buddy, and more.
 
 ## Features
