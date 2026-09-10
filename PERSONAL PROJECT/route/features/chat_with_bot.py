@@ -21,7 +21,7 @@ def format_ai_response(text):
     return Markup(text)  # Mark as safe for HTML
 
 # AI model client setup
-client = genai.Client(api_key="AIzaSyCEt8hchpwxR7p8FnlM_KHyhu3tV8gdRfQ")
+client = genai.Client(api_key="YOUR OWN API KEY HERE")
 
 @chat_bp.route("/chat_with_bot", methods=["GET", "POST"])
 @login_required
